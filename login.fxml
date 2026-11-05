@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="222.0" prefWidth="318.0" spacing="20.0"
+      xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.mycompany.project.LoginController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label alignment="CENTER" layoutX="109.0" text="Login Page" textFill="#3953a1">
+               <font>
+                  <Font name="Arabic Typesetting" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <StackPane prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="User Name">
+                     <font><Font name="Arabic Typesetting" size="18.0" /></font>
+                  </Label>
+                  <TextField fx:id="UserNametxt" />
+                  <Label text="Password">
+                     <font><Font name="Arabic Typesetting" size="18.0" /></font>
+                  </Label>
+                  <TextField fx:id="PassTxt" />
+                  <Button mnemonicParsing="false" onAction="#switchToSecondary" text="Login">
+                     <font><Font name="Arabic Typesetting" size="18.0" /></font>
+                  </Button>
+                  <Label fx:id="resultlbl" prefHeight="30.0" prefWidth="250.0" textFill="#cc1717">
+                     <font><Font name="Arabic Typesetting" size="18.0" /></font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

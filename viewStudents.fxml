@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="600.0"
+            style="-fx-background-color: #1e3d59;"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.mycompany.project.ViewStudentsController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="72.0" layoutY="74.0"
+            prefHeight="200.0" prefWidth="100.0"
+            AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0"
+            AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+         <children>
+            <Label text="View Registered Students" textFill="WHITE">
+               <font><Font size="24.0" /></font>
+            </Label>
+            <VBox prefHeight="319.0" prefWidth="570.0">
+               <children>
+                  <TableView fx:id="StudentsTable" prefHeight="319.0" prefWidth="130.0">
+                     <columns>
+                        <TableColumn fx:id="idColumn"       prefWidth="75.0"  text="Student ID" />
+                        <TableColumn fx:id="nameColumn"     prefWidth="100.0" text="Student Name" />
+                        <TableColumn fx:id="Sub1"           prefWidth="90.0"  text="Sub1 (Math)" />
+                        <TableColumn fx:id="Sub2"           prefWidth="82.0"  text="Sub2 (OOP)" />
+                        <TableColumn fx:id="Sub3"           prefWidth="84.0"  text="Sub3 (Science)" />
+                        <TableColumn fx:id="averageColumn"  prefWidth="68.0"  text="Average" />
+                     </columns>
+                  </TableView>
+               </children>
+            </VBox>
+            <Label fx:id="totalStudents" prefHeight="17.0" prefWidth="593.0"
+                   text="Total Students : 0" textFill="WHITE" underline="true" />
+            <!-- FIX: onAction="#handleBackButton" — typo 'handlBackButton' corrected -->
+            <Button mnemonicParsing="false"
+                    onAction="#handleBackButton"
+                    prefHeight="35.0" prefWidth="80.0"
+                    style="-fx-background-color: #e82626;"
+                    text="Back" textFill="WHITE" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

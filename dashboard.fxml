@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.mycompany.project.DashboardController"
+           prefWidth="652" prefHeight="562">
+
+    <!-- Background Image -->
+    <ImageView fitWidth="652" fitHeight="562"
+               pickOnBounds="true" preserveRatio="false">
+        <image>
+            <Image url="@tt.png" />
+        </image>
+    </ImageView>
+
+    <!-- Buttons VBox centered -->
+    <VBox alignment="CENTER" spacing="20">
+        <padding>
+            <Insets top="60" bottom="40" left="40" right="40"/>
+        </padding>
+
+        <!-- Row 1: Add Grade -->
+        <HBox alignment="CENTER">
+            <Button onAction="#AddGrade" text="Add Grade"
+                    textFill="#e33434" prefWidth="160" prefHeight="35">
+                <font><Font name="Arabic Typesetting" size="18.0" /></font>
+            </Button>
+        </HBox>
+
+        <!-- Row 2: AddStudent + Save Student -->
+        <HBox alignment="CENTER" spacing="80">
+            <Button onAction="#AddStudent" text="AddStudent"
+                    textFill="#d42f2f" prefWidth="160" prefHeight="35">
+                <font><Font name="Arabic Typesetting" size="18.0" /></font>
+            </Button>
+            <Button onAction="#SaveToFile" text="Save Student"
+                    textFill="#e43737" prefWidth="160" prefHeight="35">
+                <font><Font name="Arabic Typesetting" size="18.0" /></font>
+            </Button>
+        </HBox>
+
+        <!-- Row 3: Load Student Data + Report -->
+        <HBox alignment="CENTER" spacing="80">
+            <Button onAction="#LoadStudentdata" text="Load Student Data"
+                    textFill="#e73434" prefWidth="160" prefHeight="35">
+                <font><Font name="Arabic Typesetting" size="18.0" /></font>
+            </Button>
+            <Button onAction="#GoToReport" text="Report"
+                    textFill="#df3333" prefWidth="160" prefHeight="35">
+                <font><Font name="Arabic Typesetting" size="18.0" /></font>
+            </Button>
+        </HBox>
+
+        <!-- Row 4: View Student -->
+        <HBox alignment="CENTER">
+            <Button onAction="#showStudent" text="View Student"
+                    textFill="#ec3434" prefWidth="160" prefHeight="35">
+                <font><Font name="Arabic Typesetting" size="18.0" /></font>
+            </Button>
+        </HBox>
+
+        <!-- Result label -->
+        <HBox alignment="CENTER">
+            <Label fx:id="resultlbl" textFill="white" wrapText="true">
+                <font><Font name="Arabic Typesetting" size="14.0" /></font>
+            </Label>
+        </HBox>
+
+    </VBox>
+
+</StackPane>
